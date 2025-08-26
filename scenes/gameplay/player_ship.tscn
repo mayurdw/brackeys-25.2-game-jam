@@ -1,12 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://cphmpv0at6bm3"]
 
 [ext_resource type="Script" uid="uid://coxene38hfuyd" path="res://scenes/gameplay/player_ship.gd" id="1_wsgru"]
+[ext_resource type="Texture2D" uid="uid://dw5se7k25nlaw" path="res://resources/gameplay_sprites/starter_ship.tres" id="2_u8g6b"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_obxqg"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsgru"]
-size = Vector2(29, 29)
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gee4"]
+radius = 38.8909
 
 [node name="PlayerShip" type="CharacterBody2D"]
 collision_mask = 2
@@ -14,8 +12,9 @@ motion_mode = 1
 script = ExtResource("1_wsgru")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_obxqg")
+rotation = 3.14159
+texture = ExtResource("2_u8g6b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_wsgru")
+shape = SubResource("CircleShape2D_2gee4")

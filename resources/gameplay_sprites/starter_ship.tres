@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://dw5se7k25nlaw"]
+
+[ext_resource type="Texture2D" uid="uid://cx3dsokq6h4og" path="res://addons/maaacks_menus_template/assets/gameplay_assets/spaceShooter2_vector.svg" id="1_gl5sa"]
+
+[resource]
+atlas = ExtResource("1_gl5sa")
+region = Rect2(1745, 64, 100, 83)

@@ -29,4 +29,6 @@ func _physics_process(delta: float) -> void:
 	velocity.x = lerp(velocity.x, input.x * SPEED, weight_x)
 	velocity.y = lerp(velocity.y, input.y * SPEED, weight_y)
 	
+	if input:
+		rotation = lerp_angle(rotation, PI/ 2 + input.angle(), 0.25)
 	move_and_slide()
