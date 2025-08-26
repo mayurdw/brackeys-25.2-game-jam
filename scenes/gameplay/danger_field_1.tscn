@@ -1,17 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdckq3wuvdavr"]
 
-[ext_resource type="Script" uid="uid://do0c6unet1vjs" path="res://scenes/gameplay/obstacle_ring_1.gd" id="1_bil84"]
+[ext_resource type="Script" uid="uid://do0c6unet1vjs" path="res://scenes/gameplay/danger_field_1.gd" id="1_bil84"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3g1wg"]
 radius = 50.0
 
-[node name="Obstacle Ring 1" type="Area2D"]
+[node name="Danger Field 1" type="Area2D"]
 collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_bil84")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3g1wg")
 debug_color = Color(0.853154, 0.303805, 0.546694, 0.42)
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
