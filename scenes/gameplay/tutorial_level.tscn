@@ -52,5 +52,3 @@ position = Vector2(936, 576)
 position = Vector2(640, 360)
 
 [node name="Obstacle Ring 1" parent="PlayerShip" instance=ExtResource("2_twvja")]
-
-[node name="Camera2D" type="Camera2D" parent="PlayerShip"]

@@ -4,11 +4,9 @@ The following are the task needed to complete the game
 
 ## Crucial Items
 
-- [ ] Extract Basic Ship stats
 - [ ] Create Danger Meter
 - [ ] Create Fuel Meter
 - [ ] Deplete Fuel based on movement
-- [ ] Create Camera Zoom In/Out with speed
 - [ ] Create Tutorial Level
 - [ ] Create Score Meter
 - [ ] Create Moving Obstacles
@@ -19,6 +17,8 @@ The following are the task needed to complete the game
 - [ ] Upgrade Shop
 - [ ] Boost
 - [ ] Score Added UI
+- [x] Create Camera Zoom In/Out with speed
+- [x] Extract Basic Ship stats
 - [x] Ship Rotation along with direction
 - [x] Ship Asset
 
