@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://diiq24hx22oa1"]
+
+[ext_resource type="PackedScene" uid="uid://dv6d7q2kj2b0n" path="res://scenes/gameplay/obstacle.tscn" id="1_81v5o"]
+[ext_resource type="PackedScene" uid="uid://cdckq3wuvdavr" path="res://scenes/gameplay/obstacle_ring_1.tscn" id="2_twvja"]
+[ext_resource type="PackedScene" uid="uid://cphmpv0at6bm3" path="res://scenes/gameplay/player_ship.tscn" id="3_2c5gx"]
+
+[node name="Tutorial Level" type="Node2D"]
+
+[node name="Obstacle" parent="." instance=ExtResource("1_81v5o")]
+position = Vector2(523, 238)
+
+[node name="Obstacle Ring 1" parent="Obstacle" instance=ExtResource("2_twvja")]
+
+[node name="PlayerShip" parent="." instance=ExtResource("3_2c5gx")]
+position = Vector2(777, 221)
