@@ -26,3 +26,5 @@ position = Vector2(0.5, 0.5)
 shape = ExtResource("3_ihbxt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+editor_draw_limits = true
+editor_draw_drag_margin = true
