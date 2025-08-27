@@ -26,3 +26,19 @@ scale = Vector2(1.2, 1.2)
 [node name="Obstacle6" parent="." instance=ExtResource("1_a3025")]
 position = Vector2(-168, 184)
 rotation = 2.0944
+
+[node name="Obstacle7" parent="." instance=ExtResource("1_a3025")]
+position = Vector2(-472, 88)
+rotation = 2.0944
+
+[node name="Obstacle8" parent="." instance=ExtResource("1_a3025")]
+position = Vector2(232, -400)
+rotation = 2.0944
+
+[node name="Obstacle9" parent="." instance=ExtResource("1_a3025")]
+position = Vector2(888, 296)
+rotation = 2.0944
+
+[node name="Obstacle10" parent="." instance=ExtResource("1_a3025")]
+position = Vector2(424, -224)
+rotation = 2.0944

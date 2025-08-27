@@ -12,6 +12,9 @@ script = ExtResource("1_pusk4")
 rotation = 1.5708
 shape = ExtResource("3_vwdw6")
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+rect = Rect2(-50, -40, 100, 80)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_bmr32")
 
