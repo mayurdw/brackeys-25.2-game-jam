@@ -1,3 +1,7 @@
-[gd_scene format=3 uid="uid://diiq24hx22oa1"]
+[gd_scene load_steps=2 format=3 uid="uid://diiq24hx22oa1"]
+
+[ext_resource type="PackedScene" uid="uid://cphmpv0at6bm3" path="res://scenes/gameplay/player_ship.tscn" id="3_2c5gx"]
 
 [node name="Tutorial Level" type="Node2D"]
+
+[node name="PlayerShip" parent="." instance=ExtResource("3_2c5gx")]
