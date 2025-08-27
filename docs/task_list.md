@@ -6,8 +6,6 @@ The following are the task needed to complete the game
 
 - [ ] Create Danger Meter
 - [ ] Create Fuel Meter
-- [ ] Deplete Fuel based on movement
-- [ ] Create Tutorial Level
 - [ ] Create Score Meter
 - [ ] Create Moving Obstacles
 - [ ] Create Enemy Ships
@@ -18,6 +16,8 @@ The following are the task needed to complete the game
 - [ ] Boost
 - [ ] Score Added UI
 - [x] Create Camera Zoom In/Out with speed
+- [x] Deplete Fuel based on movement
+- [x] Create Tutorial Level
 - [x] Extract Basic Ship stats
 - [x] Ship Rotation along with direction
 - [x] Ship Asset
