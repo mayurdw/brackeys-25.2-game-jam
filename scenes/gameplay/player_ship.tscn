@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cphmpv0at6bm3"]
+[gd_scene load_steps=7 format=3 uid="uid://cphmpv0at6bm3"]
 
 [ext_resource type="Script" uid="uid://coxene38hfuyd" path="res://scenes/gameplay/player_ship.gd" id="1_wsgru"]
 [ext_resource type="Resource" uid="uid://dxu3rjoc8js1g" path="res://resources/gameplay_resources/basic_ship.tres" id="2_2gee4"]
 [ext_resource type="Texture2D" uid="uid://dw5se7k25nlaw" path="res://resources/gameplay_sprites/starter_ship_texture.tres" id="2_u8g6b"]
 [ext_resource type="Shape2D" uid="uid://c4f7hchrllwfl" path="res://resources/gameplay_sprites/starter_ship_collider.tres" id="3_ihbxt"]
+[ext_resource type="PackedScene" uid="uid://cdckq3wuvdavr" path="res://scenes/gameplay/danger_field_1.tscn" id="5_idcen"]
 
 [sub_resource type="Curve" id="Curve_2gee4"]
 _limits = [0.0, 1.0, 0.0, 1.5]
@@ -25,6 +26,6 @@ texture = ExtResource("2_u8g6b")
 position = Vector2(0.5, 0.5)
 shape = ExtResource("3_ihbxt")
 
+[node name="Danger Field 1" parent="." instance=ExtResource("5_idcen")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
-editor_draw_limits = true
-editor_draw_drag_margin = true

@@ -1,0 +1,107 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxpb4iyla64wd"]
+
+[ext_resource type="Script" uid="uid://bokq8yf5qfj5p" path="res://scenes/gameplay/hud.gd" id="1_3qdtj"]
+[ext_resource type="Texture2D" uid="uid://c0gdpv51b0nfc" path="res://assets/gameplay_assets/spaceShooter_vector.svg" id="1_jitls"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1mid"]
+bg_color = Color(0.758192, 0.758192, 0.758192, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jitls"]
+bg_color = Color(0.921259, 0.449402, 0.359362, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qdtj"]
+atlas = ExtResource("1_jitls")
+region = Rect2(487, 238, 35, 35)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3qdtj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Danger Meter" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 24
+
+[node name="Danger Meter" type="ProgressBar" parent="MarginContainer/Danger Meter"]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_a1mid")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jitls")
+max_value = 10.0
+step = 1.0
+value = 1.0
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Danger Meter"]
+layout_mode = 2
+
+[node name="Credits" type="TextureRect" parent="MarginContainer/Danger Meter/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_3qdtj")
+expand_mode = 3
+
+[node name="Credits Value" type="Label" parent="MarginContainer/Danger Meter/HBoxContainer"]
+layout_mode = 2
+text = "x 0"
+
+[node name="Credits Diff" type="Label" parent="MarginContainer/Danger Meter/HBoxContainer"]
+layout_mode = 2
+
+[node name="Player Stats" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+alignment = 2
+
+[node name="HP" type="ProgressBar" parent="MarginContainer/Player Stats"]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_a1mid")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jitls")
+max_value = 10.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="Fuel" type="ProgressBar" parent="MarginContainer/Player Stats"]
+custom_minimum_size = Vector2(80, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxFlat_a1mid")
+theme_override_styles/fill = SubResource("StyleBoxFlat_jitls")
+step = 1.0
+value = 100.0
+show_percentage = false

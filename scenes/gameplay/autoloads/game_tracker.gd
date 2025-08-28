@@ -1,13 +1,13 @@
 extends Node
 
-var _number_of_obstacles_encountered: int = 0
-
-signal player_hit
+const obstacle_basic_score: int = 100
+var score_accumulated: int = 0
 
 func add_obstacle_encountered() -> void:
-	_number_of_obstacles_encountered = _number_of_obstacles_encountered + 1
-	print("Number Of Obstacles Encountered = " + str(_number_of_obstacles_encountered))
+	score_accumulated += obstacle_basic_score
+	SignalHub.score_updated.emit(obstacle_basic_score)
+	SignalHub.current_score.emit(score_accumulated)
 
 func obstacle_collided() -> void:
 	add_obstacle_encountered()
-	player_hit.emit()
+	SignalHub.player_hit.emit()

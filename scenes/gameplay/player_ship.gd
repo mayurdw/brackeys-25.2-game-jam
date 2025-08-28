@@ -9,13 +9,17 @@ var fuel_depleted : bool = false
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var camera_2d: Camera2D = $Camera2D
 
+
 func _ready() -> void:
 	collision_shape_2d.shape = ship_resource.ship_collider
 	sprite_2d.texture = ship_resource.ship_asset
-	GameTracker.connect("player_hit", _on_player_hit)
+	SignalHub.connect("player_hit", _on_player_hit)
+	SignalHub.current_fuel.emit(ship_resource.fuel_tank)
+	SignalHub.current_hp.emit(ship_resource.health_points)
 
 func _physics_process(delta: float) -> void:
 	if !fuel_depleted and ship_resource.fuel_tank <= 0.0:
+		SignalHub.current_fuel.emit(0.0)
 		fuel_depleted = true
 
 	_handle_input(delta)
@@ -29,8 +33,9 @@ func _physics_process(delta: float) -> void:
 func _on_player_hit() -> void:
 	if ship_resource.health_points > 0:
 		ship_resource.health_points = ship_resource.health_points - 1
-		print("Decreasing HP to = " + str(ship_resource.health_points))
+		SignalHub.current_hp.emit(ship_resource.health_points)
 	else:
+		# TODO: Game Over
 		print("You are dead")
 
 func _handle_input(delta: float) -> void:
@@ -61,7 +66,7 @@ func _on_velocity(delta: float) -> void:
 	
 	camera_2d.zoom = Vector2(zoom, zoom)
 	ship_resource.fuel_tank = ship_resource.fuel_tank - ship_resource.fuel_depletion_rate * delta
-
+	SignalHub.current_fuel.emit(ship_resource.fuel_tank)
 
 func _on_no_velocity() -> void:
 	camera_2d.zoom = Vector2.ONE

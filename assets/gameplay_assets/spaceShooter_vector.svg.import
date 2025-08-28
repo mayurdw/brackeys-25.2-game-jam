@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx3dsokq6h4og"
-path="res://.godot/imported/spaceShooter2_vector.svg-1102927361af1d9eef839cba79c481ee.ctex"
+uid="uid://c0gdpv51b0nfc"
+path="res://.godot/imported/spaceShooter_vector.svg-df8a642e7109ef1dedad8a86b02d12a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/maaacks_menus_template/assets/gameplay_assets/spaceShooter2_vector.svg"
-dest_files=["res://.godot/imported/spaceShooter2_vector.svg-1102927361af1d9eef839cba79c481ee.ctex"]
+source_file="res://assets/gameplay_assets/spaceShooter_vector.svg"
+dest_files=["res://.godot/imported/spaceShooter_vector.svg-df8a642e7109ef1dedad8a86b02d12a1.ctex"]
 
 [params]
 

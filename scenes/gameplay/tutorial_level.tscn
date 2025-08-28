@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://diiq24hx22oa1"]
+[gd_scene load_steps=4 format=3 uid="uid://diiq24hx22oa1"]
 
 [ext_resource type="PackedScene" uid="uid://cphmpv0at6bm3" path="res://scenes/gameplay/player_ship.tscn" id="3_2c5gx"]
 [ext_resource type="PackedScene" uid="uid://bvg6uaf6f2ihv" path="res://scenes/gameplay/obstacle_pattern_1.tscn" id="3_twvja"]
+[ext_resource type="PackedScene" uid="uid://cxpb4iyla64wd" path="res://scenes/gameplay/hud.tscn" id="4_twvja"]
 
 [node name="Tutorial Level" type="Node2D"]
 
 [node name="PlayerShip" parent="." instance=ExtResource("3_2c5gx")]
 
 [node name="Obstacles" type="Node2D" parent="."]
+position = Vector2(-24, 104)
 
 [node name="Obstacle Pattern 1" parent="Obstacles" instance=ExtResource("3_twvja")]
 position = Vector2(440, 384)
@@ -1304,3 +1306,7 @@ scale = Vector2(2, 2)
 [node name="Obstacle Pattern 288" parent="Obstacles" instance=ExtResource("3_twvja")]
 position = Vector2(7960, 1960)
 scale = Vector2(0.85, 0.85)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("4_twvja")]

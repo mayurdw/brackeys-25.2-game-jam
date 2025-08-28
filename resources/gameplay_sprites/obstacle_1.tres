@@ -1,6 +1,6 @@
 [gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b1inuxxjrcku1"]
 
-[ext_resource type="Texture2D" uid="uid://c0gdpv51b0nfc" path="res://addons/maaacks_menus_template/assets/gameplay_assets/spaceShooter_vector.svg" id="1_shmvv"]
+[ext_resource type="Texture2D" uid="uid://c0gdpv51b0nfc" path="res://assets/gameplay_assets/spaceShooter_vector.svg" id="1_shmvv"]
 
 [resource]
 atlas = ExtResource("1_shmvv")

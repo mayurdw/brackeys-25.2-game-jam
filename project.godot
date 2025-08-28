@@ -23,6 +23,7 @@ SceneLoader="*res://addons/maaacks_menus_template/base/scenes/autoloads/scene_lo
 ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_music_controller.tscn"
 ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/autoloads/project_ui_sound_controller.tscn"
 GameTracker="*res://scenes/gameplay/autoloads/game_tracker.gd"
+SignalHub="*res://scenes/gameplay/autoloads/signal_hub.gd"
 
 [debug]
 

@@ -1,9 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdckq3wuvdavr"]
+[gd_scene load_steps=4 format=3 uid="uid://cdckq3wuvdavr"]
 
 [ext_resource type="Script" uid="uid://do0c6unet1vjs" path="res://scenes/gameplay/danger_field_1.gd" id="1_bil84"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_3g1wg"]
-radius = 50.0
+[ext_resource type="Shape2D" uid="uid://bjxtt3ma12bx5" path="res://resources/gameplay_sprites/danger_field_1_collider.tres" id="2_8slud"]
+[ext_resource type="Texture2D" uid="uid://d38r1yx8ff6he" path="res://resources/gameplay_sprites/danger_field_1_sprite.tres" id="3_70ix6"]
 
 [node name="Danger Field 1" type="Area2D"]
 collision_layer = 4
@@ -11,8 +10,14 @@ collision_mask = 2
 script = ExtResource("1_bil84")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_3g1wg")
-debug_color = Color(0.853154, 0.303805, 0.546694, 0.42)
+shape = ExtResource("2_8slud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_70ix6")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
