@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatUpgrade" load_steps=2 format=3 uid="uid://cj8ooj1o01oox"]
+
+[ext_resource type="Script" uid="uid://yapwrijp1bgq" path="res://resources/scripts/stat_upgrade.gd" id="1_30xrl"]
+
+[resource]
+script = ExtResource("1_30xrl")
+stat = 5
+title = "Fuel Consumption Upgrade"
+description = "Don't be so thirsty"
+cost = 3000
+id = 3
+diff_value = 2.5
+metadata/_custom_type_script = "uid://yapwrijp1bgq"

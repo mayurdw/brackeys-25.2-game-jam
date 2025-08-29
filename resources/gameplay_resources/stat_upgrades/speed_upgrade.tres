@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatUpgrade" load_steps=2 format=3 uid="uid://dmdag75emyfuu"]
+
+[ext_resource type="Script" uid="uid://yapwrijp1bgq" path="res://resources/scripts/stat_upgrade.gd" id="1_v6dwp"]
+
+[resource]
+script = ExtResource("1_v6dwp")
+stat = 0
+title = "Speed Boost"
+description = "Do you want to see real speed"
+cost = 2000
+id = 6
+diff_value = 200.0
+metadata/_custom_type_script = "uid://yapwrijp1bgq"

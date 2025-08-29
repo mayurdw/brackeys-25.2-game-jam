@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatUpgrade" load_steps=2 format=3 uid="uid://bmkerjr5fvcv0"]
+
+[ext_resource type="Script" uid="uid://yapwrijp1bgq" path="res://resources/scripts/stat_upgrade.gd" id="1_qd4lh"]
+
+[resource]
+script = ExtResource("1_qd4lh")
+stat = 2
+title = "Gravity DragUpgrade"
+description = "Don't let anything hold you back"
+cost = 3000
+id = 2
+diff_value = 5.0
+metadata/_custom_type_script = "uid://yapwrijp1bgq"

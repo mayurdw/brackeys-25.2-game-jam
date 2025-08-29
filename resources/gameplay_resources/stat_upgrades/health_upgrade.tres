@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatUpgrade" load_steps=2 format=3 uid="uid://ch4tt6vfs772t"]
+
+[ext_resource type="Script" uid="uid://yapwrijp1bgq" path="res://resources/scripts/stat_upgrade.gd" id="1_0wnim"]
+
+[resource]
+script = ExtResource("1_0wnim")
+stat = 3
+title = "Health Boost"
+description = "In space, no one can hear you scream"
+cost = 3000
+id = 5
+diff_value = 10.0
+metadata/_custom_type_script = "uid://yapwrijp1bgq"

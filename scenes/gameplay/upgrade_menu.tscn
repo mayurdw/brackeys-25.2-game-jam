@@ -1,0 +1,151 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4xfgkrgco7q5"]
+
+[ext_resource type="Script" uid="uid://bcyggvppgmiq2" path="res://scenes/gameplay/upgrade_menu.gd" id="1_jvaau"]
+[ext_resource type="Script" uid="uid://clq88k42pbdhh" path="res://resources/scripts/basic_ship.gd" id="2_33gbb"]
+[ext_resource type="PackedScene" uid="uid://ysfnnbw8wvbw" path="res://scenes/gameplay/stat_display.tscn" id="3_rwi0y"]
+
+[sub_resource type="Resource" id="Resource_rwi0y"]
+script = ExtResource("2_33gbb")
+max_speed = 300.0
+accelaration = 50.0
+friction = 10.0
+health_points = 10.0
+fuel_tank = 50.0
+fuel_depletion_rate = 5.0
+metadata/_custom_type_script = "uid://clq88k42pbdhh"
+
+[node name="UpgradeMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jvaau")
+basic_ship = SubResource("Resource_rwi0y")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Title"
+horizontal_alignment = 1
+
+[node name="Description Cost" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Description Cost"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A very long description"
+horizontal_alignment = 1
+
+[node name="Cost" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Description Cost"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1000.0"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 20.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Speed" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_rwi0y")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="Acceleration" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_rwi0y")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+stat = 1
+
+[node name="Friction" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_rwi0y")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+stat = 2
+
+[node name="Health" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_rwi0y")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+stat = 3
+
+[node name="Fuel" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_rwi0y")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+stat = 4
+
+[node name="Fuel Depl" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer" instance=ExtResource("3_rwi0y")]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+stat = 5
+
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 128
+alignment = 2
+
+[node name="Left" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Left"
+
+[node name="Buy" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buy"
+
+[node name="Right" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Buttons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Right"
+
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Buttons/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Buttons/Buy" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Buttons/Right" to="." method="_on_right_pressed"]

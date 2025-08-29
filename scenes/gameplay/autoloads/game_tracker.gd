@@ -3,6 +3,8 @@ extends Node
 const obstacle_basic_score: int = 100
 var score_accumulated: int = 0
 
+var current_ship: BasicShip = preload("res://resources/gameplay_resources/basic_ship.tres")
+
 func add_obstacle_encountered() -> void:
 	score_accumulated += obstacle_basic_score
 	SignalHub.score_updated.emit(obstacle_basic_score)

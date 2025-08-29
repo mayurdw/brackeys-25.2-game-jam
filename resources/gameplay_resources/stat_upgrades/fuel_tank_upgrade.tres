@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatUpgrade" load_steps=2 format=3 uid="uid://cudh6qv300s6y"]
+
+[ext_resource type="Script" uid="uid://yapwrijp1bgq" path="res://resources/scripts/stat_upgrade.gd" id="1_wey3t"]
+
+[resource]
+script = ExtResource("1_wey3t")
+stat = 4
+title = "Fuel Tank Boost"
+description = "[Slaps roof] This bad boy can fit in so much fuel"
+cost = 3000
+id = 4
+diff_value = 50.0
+metadata/_custom_type_script = "uid://yapwrijp1bgq"

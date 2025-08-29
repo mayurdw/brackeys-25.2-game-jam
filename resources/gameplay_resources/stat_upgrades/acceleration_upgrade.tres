@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="StatUpgrade" load_steps=2 format=3 uid="uid://d0x3r7e1cd2n7"]
+
+[ext_resource type="Script" uid="uid://yapwrijp1bgq" path="res://resources/scripts/stat_upgrade.gd" id="1_hmjgk"]
+
+[resource]
+script = ExtResource("1_hmjgk")
+stat = 1
+title = "Acceleration Boost"
+description = "Eager to get started eh?"
+cost = 1000
+id = 1
+diff_value = 50.0
+metadata/_custom_type_script = "uid://yapwrijp1bgq"
