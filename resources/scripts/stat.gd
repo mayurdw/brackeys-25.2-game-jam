@@ -48,7 +48,7 @@ static func get_max_value(stat: Stat.Type) -> float:
 		Type.SPEED:
 			return 800.0
 		Type.ENGINE_POWER:
-			return 1000.0
+			return 5000.0
 		Type.FRICTION:
 			return 2.0
 		Type.HEALTH:

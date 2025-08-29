@@ -1,18 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4xfgkrgco7q5"]
+[gd_scene load_steps=3 format=3 uid="uid://b4xfgkrgco7q5"]
 
 [ext_resource type="Script" uid="uid://bcyggvppgmiq2" path="res://scenes/gameplay/upgrade_menu.gd" id="1_jvaau"]
-[ext_resource type="Script" uid="uid://clq88k42pbdhh" path="res://resources/scripts/basic_ship.gd" id="2_33gbb"]
 [ext_resource type="PackedScene" uid="uid://ysfnnbw8wvbw" path="res://scenes/gameplay/stat_display.tscn" id="3_rwi0y"]
-
-[sub_resource type="Resource" id="Resource_rwi0y"]
-script = ExtResource("2_33gbb")
-max_speed = 300.0
-accelaration = 50.0
-friction = 10.0
-health_points = 10.0
-fuel_tank = 50.0
-fuel_depletion_rate = 5.0
-metadata/_custom_type_script = "uid://clq88k42pbdhh"
 
 [node name="UpgradeMenu" type="Control"]
 layout_mode = 3
@@ -22,7 +11,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jvaau")
-basic_ship = SubResource("Resource_rwi0y")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -77,6 +65,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "1000.0"
 horizontal_alignment = 1
+
+[node name="Purchased" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/Description Cost"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "PURCHASED"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -10,3 +10,4 @@ signal current_score(current_score: int)
 signal current_hp(current_hp: int)
 signal current_fuel(current_fuel: float)
 signal current_danger_level(danger_level: float)
+signal upgrade_bought
