@@ -13,6 +13,8 @@ func _ready() -> void:
 	SignalHub.connect("current_fuel", _current_fuel)
 	SignalHub.connect("current_danger_level", _danger_level)
 	SignalHub.current_score.emit(GameTracker.score_accumulated)
+	hp.max_value = GameTracker.current_ship.health_points
+	fuel.max_value = GameTracker.current_ship.fuel_tank
 
 func _danger_level(current_danger: float) -> void:
 	danger_meter.value = current_danger

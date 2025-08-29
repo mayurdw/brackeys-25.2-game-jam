@@ -4,7 +4,7 @@ class_name Stat
 
 enum Type {
 	SPEED,
-	ACCELERATION,
+	ENGINE_POWER,
 	FRICTION,
 	HEALTH,
 	FUEL,
@@ -15,8 +15,8 @@ static func get_update_stat(ship: BasicShip, stat: Stat.Type, diff_value: float)
 	match stat:
 		Type.SPEED:
 			ship.max_speed = ship.max_speed + diff_value
-		Type.ACCELERATION:
-			ship.accelaration = ship.accelaration + diff_value
+		Type.ENGINE_POWER:
+			ship.engine_power = ship.engine_power + diff_value
 		Type.HEALTH:
 			ship.health_points = ship.health_points + diff_value
 		Type.FUEL:
@@ -31,8 +31,8 @@ static func get_stat_label(stat: Stat.Type) -> String:
 	match stat:
 		Type.SPEED:
 			return "Speed"
-		Type.ACCELERATION:
-			return "Accelaration"
+		Type.ENGINE_POWER:
+			return "Engine Power"
 		Type.HEALTH:
 			return "Health"
 		Type.FUEL:
@@ -47,10 +47,10 @@ static func get_max_value(stat: Stat.Type) -> float:
 	match stat:
 		Type.SPEED:
 			return 800.0
-		Type.ACCELERATION:
-			return 150.0
+		Type.ENGINE_POWER:
+			return 1000.0
 		Type.FRICTION:
-			return 20.0
+			return 2.0
 		Type.HEALTH:
 			return 50.0
 		Type.FUEL:
@@ -63,10 +63,10 @@ static func get_step_value(stat: Stat.Type) -> float:
 	match stat:
 		Type.SPEED:
 			return 100.0
-		Type.ACCELERATION:
-			return 30.0
+		Type.ENGINE_POWER:
+			return 100.0
 		Type.FRICTION:
-			return 1.0
+			return 0.01
 		Type.HEALTH:
 			return 1.0
 		Type.FUEL:
@@ -79,8 +79,8 @@ static func get_stat_current_value(stat: Stat.Type, ship: BasicShip) -> float:
 	match stat:
 		Type.SPEED:
 			return ship.max_speed
-		Type.ACCELERATION:
-			return ship.accelaration
+		Type.ENGINE_POWER:
+			return ship.engine_power
 		Type.FRICTION:
 			return ship.friction
 		Type.HEALTH:

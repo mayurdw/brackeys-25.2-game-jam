@@ -9,5 +9,5 @@ title = "Gravity DragUpgrade"
 description = "Don't let anything hold you back"
 cost = 3000
 id = 2
-diff_value = 5.0
+diff_value = 0.5
 metadata/_custom_type_script = "uid://yapwrijp1bgq"
