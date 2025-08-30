@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://w7555whkayyn"]
+
+[ext_resource type="Texture2D" uid="uid://c0gdpv51b0nfc" path="res://assets/gameplay_assets/spaceShooter_vector.svg" id="1_c6mej"]
+
+[resource]
+atlas = ExtResource("1_c6mej")
+region = Rect2(768, 101, 91, 84)
