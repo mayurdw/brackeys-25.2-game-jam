@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://opv6nqs78qfx"]
+
+[ext_resource type="PackedScene" uid="uid://o6gkkl2qrsds" path="res://scenes/gameplay/moving_obstacle.tscn" id="1_prcni"]
+
+[node name="Moving Obstacles" type="Node2D"]
+
+[node name="Moving Obstacle" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-608, 552)
+
+[node name="Moving Obstacle2" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(184, 1168)
+
+[node name="Moving Obstacle3" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(1816, 848)
+
+[node name="Moving Obstacle4" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(2384, -160)
+
+[node name="Moving Obstacle5" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(1080, -328)
+
+[node name="Moving Obstacle6" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(296, 2200)
+
+[node name="Moving Obstacle7" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-1384, 1960)
+
+[node name="Moving Obstacle8" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-1208, 1352)
+
+[node name="Moving Obstacle9" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-896, 2240)
+
+[node name="Moving Obstacle10" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-248, 2760)
+
+[node name="Moving Obstacle11" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-1152, 2776)
+
+[node name="Moving Obstacle12" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(648, 2808)
+
+[node name="Moving Obstacle13" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(3040, 2792)
+
+[node name="Moving Obstacle14" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(3832, -840)
+
+[node name="Moving Obstacle15" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(2752, -1016)
+
+[node name="Moving Obstacle16" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-432, -2096)
+
+[node name="Moving Obstacle17" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(536, -1448)
+
+[node name="Moving Obstacle18" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-1640, -600)
+
+[node name="Moving Obstacle19" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-2576, 280)
+
+[node name="Moving Obstacle20" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-2648, -472)
+
+[node name="Moving Obstacle21" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-4208, -576)
+
+[node name="Moving Obstacle22" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-3848, 448)
+
+[node name="Moving Obstacle23" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(2920, 3312)
+
+[node name="Moving Obstacle24" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(4048, 3160)
+
+[node name="Moving Obstacle25" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(3712, 2264)
+
+[node name="Moving Obstacle26" parent="." instance=ExtResource("1_prcni")]
+position = Vector2(-1400, 3488)

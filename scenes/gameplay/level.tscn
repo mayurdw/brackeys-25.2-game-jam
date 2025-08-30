@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=3 uid="uid://diiq24hx22oa1"]
+
+[ext_resource type="PackedScene" uid="uid://cphmpv0at6bm3" path="res://scenes/gameplay/player_ship.tscn" id="1_f3esu"]
+[ext_resource type="PackedScene" uid="uid://cxpb4iyla64wd" path="res://scenes/gameplay/hud.tscn" id="2_ycqdy"]
+[ext_resource type="PackedScene" uid="uid://dlimwiv2v75nn" path="res://scenes/gameplay/obstacles_pattern.tscn" id="3_00eh4"]
+[ext_resource type="PackedScene" uid="uid://opv6nqs78qfx" path="res://scenes/gameplay/moving_obstacle_patterns.tscn" id="4_qvctc"]
+[ext_resource type="PackedScene" uid="uid://c8nbb6e0qrhhe" path="res://scenes/gameplay/enemy_ship.tscn" id="5_7e62l"]
+
+[node name="Level" type="Node2D"]
+
+[node name="PlayerShip" parent="." instance=ExtResource("1_f3esu")]
+position = Vector2(640, 360)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("2_ycqdy")]
+
+[node name="Obstacles" parent="." instance=ExtResource("3_00eh4")]
+
+[node name="Moving Obstacles" parent="." instance=ExtResource("4_qvctc")]
+
+[node name="Enemy Ships" type="Node2D" parent="."]
+
+[node name="Enemy Ship" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-456, 224)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship2" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-488, 1024)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship3" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(544, 1136)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship4" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-1360, 1152)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship5" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-2072, 344)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship6" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-2216, 176)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship7" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-2328, -152)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship8" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-2552, -240)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship9" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-288, -1552)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship10" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(176, -2408)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship11" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-752, -2440)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship12" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(3768, -440)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship13" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(4472, -1096)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship14" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(3280, -992)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship15" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(2576, -1648)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship16" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(288, -1752)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship17" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-448, -2792)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship18" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(552, -3384)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship19" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-816, -3720)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship20" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(2272, -672)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship21" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(4288, 1488)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship22" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(4000, 1688)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship23" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(3440, 2072)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship24" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(2656, 2528)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship25" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(1384, 2528)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship26" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(1352, 1888)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship27" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(456, 2544)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship28" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-1176, 2544)
+target_direction = NodePath("../../PlayerShip")
+
+[node name="Enemy Ship29" parent="Enemy Ships" node_paths=PackedStringArray("target_direction") instance=ExtResource("5_7e62l")]
+position = Vector2(-2704, 992)
+target_direction = NodePath("../../PlayerShip")

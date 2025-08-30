@@ -8,7 +8,7 @@
 script = ExtResource("1_xjk54")
 max_speed = 300.0
 engine_power = 500.0
-friction = 10.0
+friction = 1.0
 health_points = 10.0
 fuel_tank = 50.0
 fuel_depletion_rate = 5.0

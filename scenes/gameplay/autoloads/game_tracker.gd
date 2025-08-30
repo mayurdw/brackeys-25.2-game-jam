@@ -1,7 +1,7 @@
 extends Node
 
 const obstacle_basic_score: int = 100
-var score_accumulated: int = 10000
+var score_accumulated: int = 0
 var upgrades_bought: Array[int]
 
 var current_ship: BasicShip = preload("res://resources/gameplay_resources/basic_ship.tres")

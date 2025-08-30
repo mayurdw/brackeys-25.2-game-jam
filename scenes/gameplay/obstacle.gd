@@ -36,5 +36,5 @@ func _on_area_entered(area: Area2D) -> void:
 
 func _destroy() -> void:
 	# Destruction Animation
-	collision_shape_2d.disabled = true
+	collision_shape_2d.set_deferred("disabled", true)
 	call_deferred("queue_free")
