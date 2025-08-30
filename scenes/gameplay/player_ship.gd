@@ -17,7 +17,7 @@ var steering_angle: float = 30.0
 var max_speed_reverse: float = 250
 var traction_fast: float = 2.5
 var traction_slow: float = 10
-
+var time_passed: float = 0.0
 var acceleration: Vector2 = Vector2.ZERO
 
 func _on_player_hit() -> void:
@@ -80,8 +80,12 @@ func _on_velocity(delta: float) -> void:
 	var zoom = lerpf(camera_2d.zoom.x, sample, 0.1)
 	
 	camera_2d.zoom = Vector2(zoom, zoom)
-	ship_resource.fuel_tank = ship_resource.fuel_tank - ship_resource.fuel_depletion_rate * delta
-	SignalHub.current_fuel.emit(ship_resource.fuel_tank)
+	
+	time_passed += delta
+	if time_passed >= 1.0:
+		time_passed = 0.0
+		ship_resource.fuel_tank -= ship_resource.fuel_depletion_rate * delta
+		SignalHub.current_fuel.emit(ship_resource.fuel_tank)
 
 func _on_no_velocity() -> void:
 	camera_2d.zoom = Vector2.ONE

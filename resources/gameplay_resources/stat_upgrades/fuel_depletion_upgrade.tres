@@ -9,5 +9,5 @@ title = "Fuel Consumption Upgrade"
 description = "Don't be so thirsty"
 cost = 3000
 id = 3
-diff_value = 0.5
+diff_value = 2.5
 metadata/_custom_type_script = "uid://yapwrijp1bgq"

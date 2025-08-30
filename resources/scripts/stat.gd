@@ -56,7 +56,7 @@ static func get_max_value(stat: Stat.Type) -> float:
 		Type.FUEL:
 			return 200.0
 		Type.FUEL_DEPLETION:
-			return 1.0
+			return 5.0
 	return 0.0
 
 static func get_step_value(stat: Stat.Type) -> float:
@@ -72,7 +72,7 @@ static func get_step_value(stat: Stat.Type) -> float:
 		Type.FUEL:
 			return 10.0
 		Type.FUEL_DEPLETION:
-			return 0.1
+			return 0.5
 	return 0.0
 
 static func get_stat_current_value(stat: Stat.Type, ship: BasicShip) -> float:

@@ -10,7 +10,7 @@ extends Area2D
 
 func _ready() -> void:
 	sprite_2d.frame = randi_range(0, 3)
-	timer.wait_time = randi_range(2, 8)
+	timer.wait_time = randi_range(1, 3)
 	timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
