@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://yyqey2eubjh0"]
+
+[ext_resource type="Texture2D" uid="uid://c0gdpv51b0nfc" path="res://assets/gameplay_assets/spaceShooter_vector.svg" id="1_40qc8"]
+[ext_resource type="Script" uid="uid://b0eyc1l160yyj" path="res://scenes/gameplay/missiles.gd" id="1_nggjp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nggjp"]
+atlas = ExtResource("1_40qc8")
+region = Rect2(100, 381, 13, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf1vg"]
+size = Vector2(11.5, 57)
+
+[node name="Missiles" type="Area2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_nggjp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_nggjp")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.75, 28.5)
+shape = SubResource("RectangleShape2D_bf1vg")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(6.5, 28.5)
+scale = Vector2(0.65, 2.85)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

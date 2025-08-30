@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8nbb6e0qrhhe"]
+
+[ext_resource type="Texture2D" uid="uid://c0gdpv51b0nfc" path="res://assets/gameplay_assets/spaceShooter_vector.svg" id="1_i81tj"]
+[ext_resource type="Script" uid="uid://wa7fsb6ckyd7" path="res://scenes/gameplay/enemy_ship.gd" id="1_y5n4r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5n4r"]
+atlas = ExtResource("1_i81tj")
+region = Rect2(0, 786, 95, 445)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i81tj"]
+size = Vector2(80, 72)
+
+[node name="Enemy Ship" type="Area2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_y5n4r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_y5n4r")
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_i81tj")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(4, 3.6)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
